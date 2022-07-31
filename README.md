@@ -1,6 +1,6 @@
 ## Sobre o projeto:
 
-Essse projeto aborda lições relacionadas a leitor e escritor de arquivos e manipulação de string de Java.
+Esse projeto aborda lições relacionadas a leitor e escritor de arquivos e manipulação de string de Java.
 
 Neste projeto desenvolvi um sistema que recebe um arquivo do tipo CSV de uma página web e faz a conversão de seus dados para um formato novo.
 Cada arquivo de entrada gera um arquivo de saída com os dados modificados.
