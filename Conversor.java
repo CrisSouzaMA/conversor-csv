@@ -14,6 +14,16 @@ public class Conversor {
     new Conversor().converterPasta(pastaDeEntradas, pastaDeSaidas);
   }
 
+  private String novaData(String data) {
+    String[] campos = data.split("/");
+
+    String dia = campos[0];
+    String mes = campos[1];
+    String ano = campos[2];
+
+    return String.format("%s-%s-%s", ano, mes, dia);
+  }
+
   public String novoCpf(String cpf) {
     return cpf.substring(0, 3) + "."
             + cpf.substring(3, 6) + "."
