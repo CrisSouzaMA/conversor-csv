@@ -7,4 +7,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class Conversor {
+
+  public static void main(String[] args) throws IOException {
+    File pastaDeEntradas = new File("./entradas/");
+    File pastaDeSaidas = new File("./saidas/");
+    new Conversor().converterPasta(pastaDeEntradas, pastaDeSaidas);
+  }
+
 }
