@@ -14,6 +14,23 @@ public class Conversor {
     new Conversor().converterPasta(pastaDeEntradas, pastaDeSaidas);
   }
 
+  public void converterPasta(File pastaDeEntradas, File pastaDeSaidas) throws IOException {
+    // TODO: Implementar.
+    ArrayList<File> arquivosDeEntrada = new ArrayList<>();
+    if (pastaDeEntradas.exists() && pastaDeEntradas.isDirectory()) {
+      for (File arquivoEstado : pastaDeEntradas.listFiles()) {
+        arquivosDeEntrada.add(arquivoEstado);
+      }
+    }
+
+    if (arquivosDeEntrada.size() > 0) {
+      criarPastaDeSaidas(pastaDeSaidas);
+      for (File arquivoDeEntrada : arquivosDeEntrada) {
+        novoArquivoDeSaida(pastaDeSaidas, arquivoDeEntrada);
+      }
+    }
+  }
+
   private void criarPastaDeSaidas(File pastaDeSaidas) {
     boolean pastaDeSaidaCriada = pastaDeSaidas.mkdirs();
     if (pastaDeSaidaCriada) {
