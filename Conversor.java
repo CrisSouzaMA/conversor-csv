@@ -14,6 +14,12 @@ public class Conversor {
     new Conversor().converterPasta(pastaDeEntradas, pastaDeSaidas);
   }
 
+  private void novoArquivoDeSaida(File pastaDeSaidas, File arquivoDeEntrada) throws IOException {
+    File arquivoDeSaida = new File(pastaDeSaidas, arquivoDeEntrada.getName());
+    arquivoDeSaida.createNewFile();
+    this.lerEscreverArquivo(arquivoDeEntrada, arquivoDeSaida);
+  }
+
   public void lerEscreverArquivo(File arquivoDeEntrada, File arquivoDeSaida) throws IOException {
     BufferedReader leitorArquivo = new BufferedReader(new FileReader(arquivoDeEntrada));
     BufferedWriter escritorArquivo = new BufferedWriter(new FileWriter(arquivoDeSaida));
