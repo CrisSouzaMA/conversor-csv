@@ -14,6 +14,13 @@ public class Conversor {
     new Conversor().converterPasta(pastaDeEntradas, pastaDeSaidas);
   }
 
+  private void criarPastaDeSaidas(File pastaDeSaidas) {
+    boolean pastaDeSaidaCriada = pastaDeSaidas.mkdirs();
+    if (pastaDeSaidaCriada) {
+      System.out.println("Pasta '" + pastaDeSaidas.getName() + "' criada com sucesso!");
+    }
+  }
+
   private void novoArquivoDeSaida(File pastaDeSaidas, File arquivoDeEntrada) throws IOException {
     File arquivoDeSaida = new File(pastaDeSaidas, arquivoDeEntrada.getName());
     arquivoDeSaida.createNewFile();
